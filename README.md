@@ -1,5 +1,7 @@
 # koop-provider-opendatasoft
 
+[![npm](https://img.shields.io/npm/v/koop-provider-opendatasoft)](https://www.npmjs.com/package/koop-provider-opendatasoft) [![Build Status](https://travis-ci.org/haoliangyu/koop-provider-opendatasoft.svg?branch=master)](https://travis-ci.org/haoliangyu/koop-provider-opendatasoft)
+
 A [Koop](https://koopjs.github.io/) provider plugin to load data from a [OpenDataSoft](https://www.opendatasoft.com) data portal or the [Data Network](https://data.opendatasoft.com/explore) for public datasets.
 
 This provider uses the [OpenDataSoft V2 API](https://data.opendatasoft.com/api/v2/console) to request raw data in GeoJSON format.
