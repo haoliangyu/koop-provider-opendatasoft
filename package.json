@@ -1,6 +1,6 @@
 {
   "name": "koop-provider-opendatasoft",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "an Koop provider plugin for OpenDataSoft v2 API",
   "main": "src/index.js",
   "scripts": {
