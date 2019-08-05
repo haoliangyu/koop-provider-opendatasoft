@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 0.2.0 - 2019-08-05
+
+### Added
+* support `token`, `where`, `outFields`, `resultOffset`, and `resultRecordCount` query parameters
+
 ## 0.1.0 - 2019-08-01
 
 This is the initial release.

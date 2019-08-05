@@ -24,6 +24,40 @@ describe("model.js", function() {
       params: {
         host: "my-host",
         id: "my-dataset"
+      },
+      query: {},
+      body: {}
+    };
+
+    model.getData(req, (err, geojson) => {
+      expect(err).to.equal(null);
+      expect(geojson.type).to.equal("FeatureCollection");
+      expect(geojson.features).to.be.an("array");
+      done();
+    });
+  });
+
+  it("should get queries from body", done => {
+    const fetch = fetchMock.sandbox().getOnce("some-url", {
+      type: "FeatureCollection",
+      features: []
+    });
+    const Model = proxyquire("../src/model", {
+      "./construct-url": (host, datasetId, query) => {
+        expect(query.token).to.equal("my_token");
+        return "some-url";
+      },
+      "node-fetch": fetch
+    });
+    const model = new Model();
+    const req = {
+      params: {
+        host: "my-host",
+        id: "my-dataset"
+      },
+      query: {},
+      body: {
+        token: "my_token"
       }
     };
 
@@ -45,7 +79,9 @@ describe("model.js", function() {
     });
     const model = new Model();
     const req = {
-      params: {}
+      params: {},
+      body: {},
+      query: {}
     };
 
     model.getData(req, (err, geojson) => {
@@ -63,7 +99,9 @@ describe("model.js", function() {
     });
     const model = new Model();
     const req = {
-      params: {}
+      params: {},
+      body: {},
+      query: {}
     };
 
     model.getData(req, (err, geojson) => {

@@ -47,6 +47,16 @@ The `host` parameter is the host name of the data repository. It could be your p
 
 The `id` parameter is the dataset identifier of each OpenDatasoft dataset. It is available at the dataset's information page, for example, like [this](https://data.opendatasoft.com/explore/dataset/centres-pmi%40montreuil/information/).
 
+### Query
+
+The following query parameters are supported:
+
+- token
+- where
+- outFields
+- resultOffset
+- resultRecordCount
+
 ## Example
 
 Get all records from the dataset [Local Air Quality @ Town of Chapel Hill](https://data.opendatasoft.com/explore/dataset/local-air-quality%40townofchapelhill) from the [Data Network](https://data.opendatasoft.com/explore/)
